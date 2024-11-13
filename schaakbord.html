@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input, button {
+    margin-bottom: 20px;
+}
+        #schaakbord {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 50px);
+            grid-auto-rows: 50px;
+            gap: 0;
+            position: relative; 
+        }
+        .black {
+            background-color: black;
+        }
+        .white {
+            background-color: white;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            border: 3px solid;
+        }
+        .checker {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+            top: 5px;
+            left: 5px;
+            }
+            .checker.checker-black {
+                background-color: black;
+            }
+            .checker.checker-white {
+                background-color: white;
+                border: 2px solid black;
+            }
+    </style>
+</head>
+<body>
+    <label for="rowInput">Voer het aantal rijen van het bord in (minimaal 2):</label>
+    <input type="number" id="rowInput" min="1" max="">
+
+
+    <label for="colsInput">Voer het aantal kolommen van het bord in (minimaal 2):</label>
+    <input type="number" id="colsInput" min="1" max="">
+
+
+    <button id="Btn">Generate</button>
+<div id="schaakbord"></div>
+<script src="schaakbord.js"></script>
+</body>
+</html>
